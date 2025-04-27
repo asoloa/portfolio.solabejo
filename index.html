@@ -1,65 +1,27 @@
 <html>
     <head>
-        <style>
-            .fixed-top {
-                position: fixed;
-                top: 0;
-                right: 0;
-                left: 0;
-                background-color: #264653;
-            }
-            .parentNavBar {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(1, 1fr);
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                padding-top: 0.75rem;
-                padding-bottom: 0.75rem;
-            }
-            .childNav {
-                text-align: center;
-                color: #fff;
-            }
-            .childNavListItems {
-                display: inline-table;
-                width: 25%;
-                float: left;
-            }
-            .listLink {
-                text-decoration: none;
-                color: #fff;
-            }
-            .listLink:hover {
-                color: #e76f51;
-            }
-        </style>
+        <link href="styles.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Solomon Abejo Portfolio</title>
     </head>
     <body>
-        <nav class="fixed-top parentNavBar">
-            <div class="childNav">
-                <p>Hello! You are the <span style="text-decoration:underline;">nth</span> visitor!</p>
-            </div>
-            <div class="childNav" style="font-weight: bold;">
-                <p style="text-align: center;">Solomon Abejo Portfolio</p>
-            </div>
-            <div class="childNav">
-                <ul style="width: 80%;">
-                    <li class="childNavListItems">
-                        <a href="#about" class="listLink">About</a>
-                    </li>
-                    <li class="childNavListItems">
-                        <a href="#experience" class="listLink">Experience</a>
-                    </li>
-                    <li class="childNavListItems">
-                        <a href="#projects" class="listLink">Projects</a>
-                    </li>
-                    <li class="childNavListItems">
-                        <a href="#contact" class="listLink">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
+        <header>
+            <nav class="fixed-top parentNavBar">
+                <p class="visitor-text" style="margin-left: 3em;">Hello! You are the <span id="view-count">nth</span> visitor!</p>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                <label for="menu-toggle" class="burger">&#9776;</label>
+                <div class="menu-wrapper" style="margin-right: 3em;">
+                    <ul class="menu">
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#experience">EXPERIENCE</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <p style="padding-top: 126px; font-family: Jura; font-size: 4em; font-weight: 900; text-align: center;"><strong>Solomon Abejo</strong></p>
     </body>
 </html>

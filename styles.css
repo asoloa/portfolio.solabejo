@@ -1,0 +1,97 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #264653;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.visitor-text {
+    color: #fff;
+    margin: 0;
+}
+
+#view-count {
+    text-decoration: underline;
+}
+
+/* Burger button */
+.menu-toggle {
+    display: none;
+}
+
+.burger {
+    display: none;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Menu */
+.menu-wrapper {
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    font-weight: 600;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu li a:hover {
+    color: #e76f51;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .burger {
+        display: block;
+    }
+
+    .menu-wrapper {
+        position: absolute;
+        top: 3rem; /* height of nav */
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #264653;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 0.5rem;
+    }
+
+    .menu li {
+        padding: 0.5rem 1rem;
+    }
+
+    .menu-toggle:checked + .burger + .menu-wrapper {
+        max-height: 500px; /* adjust as more menu items are added */
+    }
+}
