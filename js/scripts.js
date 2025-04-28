@@ -16,7 +16,7 @@ async function updateCounter() {
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
     const data = await response.json();
-    document.getElementById("view-count").innerText = `Hello! You are the ${getOrdinalNumber(data)} visitor!`;
+    document.getElementById("view-count").innerText = `${getOrdinalNumber(data)}`;
   } catch (error) {
     console.error("Error in updateCounter:", error);
   }
